@@ -11551,7 +11551,7 @@ MonoBehaviour:
   triggerInteraction: 0
   layer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   raycastLength: 100
   targetCollider: {fileID: 0}
 --- !u!4 &2033002222 stripped
@@ -12287,6 +12287,10 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 2968579677889010156, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsWall.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3141435671441139559, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12303,6 +12307,14 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 5589060270935469843, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589060270935469843, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsBooster.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6105829082512824147, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -350
@@ -12327,6 +12339,14 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 6835028667031357602, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsWall.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835028667031357602, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7072196271514576335, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: m_Name
       value: PlayerOverall
