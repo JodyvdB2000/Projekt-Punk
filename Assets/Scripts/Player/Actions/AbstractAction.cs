@@ -1,3 +1,23 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f863771ae3f00387b6f30b4a8afb0ed167ee1d4667768f7a8c73f40c7f25034b
-size 442
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public abstract class AbstractAction : MonoBehaviour
+{
+    [Header("Player Actions")]
+    [SerializeField] protected PlayerActions _playerActions;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public abstract void ActionMethod();
+}

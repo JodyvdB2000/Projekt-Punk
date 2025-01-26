@@ -1,3 +1,22 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:916c619ca15a3125f0a3bd172820771f047b29718e120e2e906ef3d432d6fafa
-size 430
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraPosition : MonoBehaviour
+{
+    [Header("Position Lock")]
+
+    [SerializeField] private Transform cameraPosition;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = cameraPosition.position;
+    }
+}

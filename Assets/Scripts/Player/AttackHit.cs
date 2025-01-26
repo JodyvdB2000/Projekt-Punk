@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3b2a7f0da328469df31e64f2884053ad8e409c68d2ecbec47729b195392c0810
-size 686
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class AttackHit : MonoBehaviour
+{
+    [Header("Stats")]
+    [SerializeField] private int bulletDamage;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.gameObject.GetComponent<EnemyHealth>() != null)
+        {
+            EnemyHealth targetHealth = collider.gameObject.GetComponent<EnemyHealth>();
+
+            targetHealth.TakeDamage(bulletDamage);
+
+        }
+    }
+}

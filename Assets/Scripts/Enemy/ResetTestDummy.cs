@@ -1,3 +1,36 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f89a2ff0136c37e37a3f9508eb26a903305d65a2ab9217c5dfc8bfe62769f793
-size 827
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ResetTestDummy : MonoBehaviour
+{
+    [SerializeField] private GameObject childPrefab;
+    [SerializeField] private GameObject activeChild;
+
+    [SerializeField] private float timeToReset;
+    private bool hasChecked;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        hasChecked = false;
+        ResetDummy();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (activeChild == null && !hasChecked)
+        {
+            hasChecked = true;
+            Invoke(nameof(ResetDummy), timeToReset);
+        }
+    }
+
+    public void ResetDummy()
+    {
+        activeChild = Instantiate(childPrefab, transform.position, Quaternion.identity);
+
+        hasChecked = false;
+    }
+}
