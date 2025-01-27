@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 23505756}
   - component: {fileID: 23505755}
   - component: {fileID: 23505754}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 50354097}
   - component: {fileID: 50354096}
   - component: {fileID: 50354095}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 68234374}
   - component: {fileID: 68234373}
   - component: {fileID: 68234372}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1617,7 +1617,7 @@ GameObject:
   - component: {fileID: 300641828}
   - component: {fileID: 300641827}
   - component: {fileID: 300641826}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: BouncyPad
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2422,7 +2422,7 @@ GameObject:
   - component: {fileID: 488322924}
   - component: {fileID: 488322923}
   - component: {fileID: 488322922}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3191,7 +3191,7 @@ GameObject:
   - component: {fileID: 617762598}
   - component: {fileID: 617762599}
   - component: {fileID: 617762600}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -3362,7 +3362,7 @@ GameObject:
   - component: {fileID: 632927312}
   - component: {fileID: 632927314}
   - component: {fileID: 632927313}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -3523,7 +3523,7 @@ GameObject:
   - component: {fileID: 706730310}
   - component: {fileID: 706730309}
   - component: {fileID: 706730308}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself (5)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3629,7 +3629,7 @@ GameObject:
   - component: {fileID: 715505464}
   - component: {fileID: 715505463}
   - component: {fileID: 715505462}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -3992,7 +3992,7 @@ GameObject:
   - component: {fileID: 788643462}
   - component: {fileID: 788643461}
   - component: {fileID: 788643460}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -4662,7 +4662,7 @@ GameObject:
   - component: {fileID: 982948068}
   - component: {fileID: 982948067}
   - component: {fileID: 982948066}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -5082,7 +5082,7 @@ GameObject:
   - component: {fileID: 1034037749}
   - component: {fileID: 1034037750}
   - component: {fileID: 1034037751}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -5148,7 +5148,7 @@ GameObject:
   - component: {fileID: 1036389216}
   - component: {fileID: 1036389217}
   - component: {fileID: 1036389218}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -7434,7 +7434,7 @@ GameObject:
   - component: {fileID: 1413182395}
   - component: {fileID: 1413182396}
   - component: {fileID: 1413182397}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -8796,7 +8796,7 @@ GameObject:
   - component: {fileID: 1628488918}
   - component: {fileID: 1628488917}
   - component: {fileID: 1628488916}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -10343,7 +10343,7 @@ GameObject:
   - component: {fileID: 1841427841}
   - component: {fileID: 1841427843}
   - component: {fileID: 1841427842}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -10619,7 +10619,7 @@ GameObject:
   - component: {fileID: 1870271304}
   - component: {fileID: 1870271306}
   - component: {fileID: 1870271305}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11034,7 +11034,7 @@ GameObject:
   - component: {fileID: 1912583041}
   - component: {fileID: 1912583042}
   - component: {fileID: 1912583043}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11253,7 +11253,7 @@ GameObject:
   - component: {fileID: 1982972426}
   - component: {fileID: 1982972425}
   - component: {fileID: 1982972424}
-  m_Layer: 13
+  m_Layer: 9
   m_Name: Wall Itself (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -11551,7 +11551,7 @@ MonoBehaviour:
   triggerInteraction: 0
   layer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 128
   raycastLength: 100
   targetCollider: {fileID: 0}
 --- !u!4 &2033002222 stripped
@@ -11675,7 +11675,7 @@ GameObject:
   - component: {fileID: 2073331697}
   - component: {fileID: 2073331699}
   - component: {fileID: 2073331698}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11741,7 +11741,7 @@ GameObject:
   - component: {fileID: 2085155072}
   - component: {fileID: 2085155074}
   - component: {fileID: 2085155073}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11808,7 +11808,7 @@ GameObject:
   - component: {fileID: 2102740244}
   - component: {fileID: 2102740243}
   - component: {fileID: 2102740242}
-  m_Layer: 11
+  m_Layer: 8
   m_Name: BouncyPad (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -12287,6 +12287,10 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 2968579677889010156, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsWall.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
     - target: {fileID: 3141435671441139559, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -12303,6 +12307,18 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 5589060270935469843, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: inTunnel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589060270935469843, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5589060270935469843, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsBooster.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 6105829082512824147, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -350
@@ -12319,14 +12335,34 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 6580095735086513595, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: awayFromWallRunForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580095735086513595, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: awayFromWallClimbForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6649864475709459994, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
     - target: {fileID: 6835028667031357602, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: isWallRunning
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835028667031357602, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 6835028667031357602, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsWall.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835028667031357602, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7072196271514576335, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: m_Name
       value: PlayerOverall
@@ -12419,6 +12455,62 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].time
+      value: 0.3335908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].value
+      value: -0.00000086426735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].value
+      value: 0.5541787
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].inSlope
+      value: 1.6612555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].inSlope
+      value: 0.63505995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].outSlope
+      value: 1.6612555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].inWeight
+      value: 0.29130724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].outSlope
+      value: 0.63505995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].outWeight
+      value: 0.43425122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8615461960173369371, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
     - {fileID: 5259695727535706128, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
