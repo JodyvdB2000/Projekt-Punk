@@ -3191,7 +3191,7 @@ GameObject:
   - component: {fileID: 617762598}
   - component: {fileID: 617762599}
   - component: {fileID: 617762600}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -3362,7 +3362,7 @@ GameObject:
   - component: {fileID: 632927312}
   - component: {fileID: 632927314}
   - component: {fileID: 632927313}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -5082,7 +5082,7 @@ GameObject:
   - component: {fileID: 1034037749}
   - component: {fileID: 1034037750}
   - component: {fileID: 1034037751}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -5148,7 +5148,7 @@ GameObject:
   - component: {fileID: 1036389216}
   - component: {fileID: 1036389217}
   - component: {fileID: 1036389218}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -7434,7 +7434,7 @@ GameObject:
   - component: {fileID: 1413182395}
   - component: {fileID: 1413182396}
   - component: {fileID: 1413182397}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -10343,7 +10343,7 @@ GameObject:
   - component: {fileID: 1841427841}
   - component: {fileID: 1841427843}
   - component: {fileID: 1841427842}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -10619,7 +10619,7 @@ GameObject:
   - component: {fileID: 1870271304}
   - component: {fileID: 1870271306}
   - component: {fileID: 1870271305}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11034,7 +11034,7 @@ GameObject:
   - component: {fileID: 1912583041}
   - component: {fileID: 1912583042}
   - component: {fileID: 1912583043}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11675,7 +11675,7 @@ GameObject:
   - component: {fileID: 2073331697}
   - component: {fileID: 2073331699}
   - component: {fileID: 2073331698}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -11741,7 +11741,7 @@ GameObject:
   - component: {fileID: 2085155072}
   - component: {fileID: 2085155074}
   - component: {fileID: 2085155073}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Top Limit
   m_TagString: WallRunLimit
   m_Icon: {fileID: 0}
@@ -12335,6 +12335,14 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 6580095735086513595, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: awayFromWallRunForce
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6580095735086513595, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: awayFromWallClimbForce
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6649864475709459994, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
       propertyPath: _playerActions
       value: 
@@ -12447,6 +12455,62 @@ PrefabInstance:
       propertyPath: _playerActions
       value: 
       objectReference: {fileID: 2033002215}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].time
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].time
+      value: 0.3335908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].value
+      value: -0.00000086426735
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].value
+      value: 0.5541787
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].inSlope
+      value: 1.6612555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].inSlope
+      value: 0.63505995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].outSlope
+      value: 1.6612555
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].inWeight
+      value: 0.29130724
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].outSlope
+      value: 0.63505995
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].outWeight
+      value: 0.43425122
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[0].tangentMode
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907608121783357204, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
+      propertyPath: dashCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8615461960173369371, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
     - {fileID: 5259695727535706128, guid: 6d78006f9aee9f242ae5a4280bcb1597, type: 3}
