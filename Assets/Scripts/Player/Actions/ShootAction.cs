@@ -17,6 +17,8 @@ public class ShootAction : AbstractAction
     public bool shooting;
     public bool reloading;
     public int currentAmmo;
+    private float timeToNextShot;
+    private int bulletsLeftInBurst;
 
     [Space(15)]
 
@@ -43,6 +45,7 @@ public class ShootAction : AbstractAction
         shooting = false;
 
         currentAmmo = gunStatsScript.maxMagazineSize;
+        gunStatsScript.timeToNextShot = 1 / gunStatsScript.shotsPerSecond;
     }
 
     // Update is called once per frame
@@ -65,6 +68,13 @@ public class ShootAction : AbstractAction
         
     }
 
+    public void ResetGun()
+    {
+        currentAmmo = gunStatsScript.maxMagazineSize;
+        readyToShoot = true;
+        reloading = false;
+    }
+
     public override void ActionMethod()
     {
         if (!readyToShoot || reloading || currentAmmo <= 0)
@@ -82,22 +92,55 @@ public class ShootAction : AbstractAction
             if (readyToShoot && !reloading)
             {
                 readyToShoot = false;
-                currentAmmo--;
 
-                if (Physics.Raycast(raycastOrigin.position, raycastOrigin.forward, out aimHit, raycastLength, layer, triggerInteraction))
+                FireBullet();
+
+                if (gunStatsScript.burstFire)
                 {
-                    crosshairOnEnemy = true;
-                    targetCollider = aimHit.collider;
-                    targetCollider.GetComponent<EnemyHealth>().TakeDamage(gunStatsScript.damagePerShot);
+                    bulletsLeftInBurst = gunStatsScript.bulletsPerBurst - 1;
+                    Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
                 }
 
-                Invoke(nameof(ResetShot), gunStatsScript.timeBetweenShots);
+                Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
             }
         }
         else
         {
             Reload();
         }
+    }
+
+    public void BurstFire()
+    {
+        if (bulletsLeftInBurst > 0 && currentAmmo > 0)
+        {
+            FireBullet();
+            bulletsLeftInBurst--;
+            Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
+        }
+    }
+
+    public void FireBullet()
+    {
+        currentAmmo--;
+
+        // Bullet Spread:
+        float xSpread = Random.Range(-gunStatsScript.shotSpread, gunStatsScript.shotSpread);
+        float ySpread = Random.Range(-gunStatsScript.shotSpread, gunStatsScript.shotSpread);
+
+        Vector3 newShotDirection = raycastOrigin.forward + new Vector3(xSpread, ySpread, 0);
+
+        if (Physics.Raycast(raycastOrigin.position, newShotDirection, out aimHit, raycastLength, layer, triggerInteraction))
+        {
+            crosshairOnEnemy = true;
+            targetCollider = aimHit.collider;
+            targetCollider.GetComponent<EnemyHealth>().TakeDamage(gunStatsScript.damagePerShot);
+        }
+    }
+
+    public void ResetBurstShot()
+    {
+
     }
 
     public void ResetShot()

@@ -11,6 +11,7 @@ TagManager:
   - Moveable
   - WallRunLimit
   - Enemy
+  - GunItem
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Enemy
   - Booster
   - Wall
-  - 
+  - Items
   - 
   - 
   - 
