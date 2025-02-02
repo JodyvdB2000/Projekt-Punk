@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using EZCameraShake;
 
 public class ShootAction : AbstractAction
 {
@@ -100,8 +101,12 @@ public class ShootAction : AbstractAction
                     bulletsLeftInBurst = gunStatsScript.bulletsPerBurst - 1;
                     Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
                 }
+                else
+                {
+                    Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
+                }
 
-                Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
+                
             }
         }
         else
@@ -112,11 +117,18 @@ public class ShootAction : AbstractAction
 
     public void BurstFire()
     {
-        if (bulletsLeftInBurst > 0 && currentAmmo > 0)
+        if (currentAmmo > 0)
         {
-            FireBullet();
-            bulletsLeftInBurst--;
-            Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
+            if (bulletsLeftInBurst > 0)
+            {
+                FireBullet();
+                bulletsLeftInBurst--;
+                Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
+            }
+            else if (bulletsLeftInBurst == 0)
+            {
+                Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
+            }
         }
     }
 
@@ -130,17 +142,23 @@ public class ShootAction : AbstractAction
 
         Vector3 newShotDirection = raycastOrigin.forward + new Vector3(xSpread, ySpread, 0);
 
+        Debug.Log(xSpread + ", " + ySpread);
+
         if (Physics.Raycast(raycastOrigin.position, newShotDirection, out aimHit, raycastLength, layer, triggerInteraction))
         {
             crosshairOnEnemy = true;
             targetCollider = aimHit.collider;
-            targetCollider.GetComponent<EnemyHealth>().TakeDamage(gunStatsScript.damagePerShot);
+            if (targetCollider.gameObject.tag.Equals("Enemy"))
+            {
+                targetCollider.GetComponent<EnemyHealth>().TakeDamage(gunStatsScript.damagePerShot);
+            }
+            else if (targetCollider.gameObject.tag.Equals("Moveable"))
+            {
+                targetCollider.GetComponent<MoveableObject>().ApplyForce(gunStatsScript.damagePerShot, aimHit.point, transform.position);
+            }
         }
-    }
 
-    public void ResetBurstShot()
-    {
-
+        CameraShaker.Instance.ShakeOnce(gunStatsScript.cameraShakeMagnitude, gunStatsScript.cameraShakeRoughness, gunStatsScript.cameraShakeFadeInTime, gunStatsScript.cameraShakeFadeOutTime);
     }
 
     public void ResetShot()

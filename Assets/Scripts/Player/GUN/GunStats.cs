@@ -5,6 +5,12 @@ using UnityEngine;
 public class GunStats : MonoBehaviour
 {
     [Header("Statistics")]
+    [Header("Camera")]
+    public float cameraShakeRoughness;
+    public float cameraShakeMagnitude; 
+    public float cameraShakeFadeInTime;
+    public float cameraShakeFadeOutTime;
+    [Space(15)]
     [Header("Damage")]
     public float damagePerShot;
     public float critChance;
@@ -16,9 +22,10 @@ public class GunStats : MonoBehaviour
     public float timeToNextShot;
     public float shotSpread;
     public bool burstFire;
+    public int bulletsPerBurst;
     public float burstResetTime;
     public bool shotgunFire;
-    public int bulletsPerBurst;
+    public int bulletsPerShotgun;
     [Space(15)]
     [Header("Magazine & Ammo Types")]
     public int maxMagazineSize;
@@ -65,33 +72,57 @@ public class GunStats : MonoBehaviour
 
         shotSpread += newItem.shotSpread;
 
-        burstFire = newItem.burstFire;
-        shotgunFire = newItem.shotgunFire;
-        if (shotgunFire || burstFire)
+        if (newItem.applyBurst)
         {
-            bulletsPerBurst += newItem.bulletsPerBurst;
+            burstFire = newItem.burstFire;
+            if (burstFire)
+            {
+                bulletsPerBurst += newItem.bulletsPerBurst;
+            }
+        }
+
+        if (newItem.applyShotgun)
+        {
+            shotgunFire = newItem.shotgunFire;
+            if (shotgunFire)
+            {
+                bulletsPerShotgun += newItem.bulletsPerShotgun;
+            }
         }
 
         maxMagazineSize += newItem.maxMagazineSize;
         reloadSpeed += newItem.reloadSpeed;
 
-        replaceWithProjectile = newItem.replaceWithProjectile;
-        if (replaceWithProjectile)
+        if (newItem.applyProjectile)
         {
-            projectileObject = newItem.projectileObject;
+            replaceWithProjectile = newItem.replaceWithProjectile;
+            if (replaceWithProjectile)
+            {
+                projectileObject = newItem.projectileObject;
+            }
         }
 
-        scopeActive = newItem.scopeActive;
-        scopeInAperture = newItem.scopeInAperture;
-        damageRangeDropoff = newItem.damageRangeDropoff;
-
-        statusEffect = newItem.statusEffect;
-        if (statusEffect != StatusEffects.statusEffectsEnum.None)
+        if (newItem.applyScope)
         {
-            statusChance += newItem.statusChance;
+            scopeActive = newItem.scopeActive;
+            scopeInAperture += newItem.scopeInAperture;
         }
 
-        laserActive = newItem.laserActive;
+        damageRangeDropoff += newItem.damageRangeDropoff;
+
+        if (newItem.applyStatus)
+        {
+            statusEffect = newItem.statusEffect;
+            if (statusEffect != StatusEffects.statusEffectsEnum.None)
+            {
+                statusChance += newItem.statusChance;
+            }
+        }
+
+        if (newItem.applyLaser)
+        {
+            laserActive = newItem.laserActive;
+        }
 
         specialEffects.Add(newItem.specialEffect);
     }
