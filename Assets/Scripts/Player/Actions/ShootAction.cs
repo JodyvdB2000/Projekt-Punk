@@ -12,6 +12,7 @@ public class ShootAction : AbstractAction
 {
     [Header("References")]
     [SerializeField] private GunStats gunStatsScript;
+    [SerializeField] private BulletTracers tracerScript;
 
     [Header("Active Trackers")]
     [SerializeField] private bool readyToShoot;
@@ -88,30 +89,38 @@ public class ShootAction : AbstractAction
 
     public void Shoot()
     {
-        if (currentAmmo > 0)
+        if (readyToShoot && !reloading)
         {
-            if (readyToShoot && !reloading)
+            readyToShoot = false;
+
+            if (gunStatsScript.shotgunFire)
             {
-                readyToShoot = false;
-
-                FireBullet();
-
-                if (gunStatsScript.burstFire)
+                for (int i = 0; i < gunStatsScript.bulletsPerShotgun; i++)
                 {
-                    bulletsLeftInBurst = gunStatsScript.bulletsPerBurst - 1;
-                    Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
+                    FireBullet();
                 }
-                else
-                {
-                    Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
-                }
-
-                
             }
-        }
-        else
-        {
-            Reload();
+            else
+            {
+                FireBullet();
+            }
+
+            currentAmmo--;
+
+            if (currentAmmo <= 0)
+            {
+                Reload();
+            }
+
+            if (gunStatsScript.burstFire)
+            {
+                bulletsLeftInBurst = gunStatsScript.bulletsPerBurst - 1;
+                Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
+            }
+            else
+            {
+                Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
+            }
         }
     }
 
@@ -121,11 +130,30 @@ public class ShootAction : AbstractAction
         {
             if (bulletsLeftInBurst > 0)
             {
-                FireBullet();
+                if (gunStatsScript.shotgunFire)
+                {
+                    for (int i = 0; i < gunStatsScript.bulletsPerShotgun; i++)
+                    {
+                        FireBullet();
+                    }
+                }
+                else
+                {
+                    FireBullet();
+                }
+
+                currentAmmo--;
+
                 bulletsLeftInBurst--;
+
                 Invoke(nameof(BurstFire), gunStatsScript.burstResetTime);
+
+                if (currentAmmo <= 0)
+                {
+                    Reload();
+                }
             }
-            else if (bulletsLeftInBurst == 0)
+            else if (bulletsLeftInBurst <= 0)
             {
                 Invoke(nameof(ResetShot), gunStatsScript.timeToNextShot);
             }
@@ -134,8 +162,6 @@ public class ShootAction : AbstractAction
 
     public void FireBullet()
     {
-        currentAmmo--;
-
         // Bullet Spread:
         float xSpread = Random.Range(-gunStatsScript.shotSpread, gunStatsScript.shotSpread);
         float ySpread = Random.Range(-gunStatsScript.shotSpread, gunStatsScript.shotSpread);
@@ -147,7 +173,9 @@ public class ShootAction : AbstractAction
         if (Physics.Raycast(raycastOrigin.position, newShotDirection, out aimHit, raycastLength, layer, triggerInteraction))
         {
             crosshairOnEnemy = true;
+
             targetCollider = aimHit.collider;
+
             if (targetCollider.gameObject.tag.Equals("Enemy"))
             {
                 targetCollider.GetComponent<EnemyHealth>().TakeDamage(gunStatsScript.damagePerShot);
@@ -157,6 +185,8 @@ public class ShootAction : AbstractAction
                 targetCollider.GetComponent<MoveableObject>().ApplyForce(gunStatsScript.damagePerShot, aimHit.point, transform.position);
             }
         }
+
+        tracerScript.FireParticle(aimHit);
 
         CameraShaker.Instance.ShakeOnce(gunStatsScript.cameraShakeMagnitude, gunStatsScript.cameraShakeRoughness, gunStatsScript.cameraShakeFadeInTime, gunStatsScript.cameraShakeFadeOutTime);
     }
