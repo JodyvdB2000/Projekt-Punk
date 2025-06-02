@@ -3,6 +3,8 @@ Hi there! Welcome to the Projekt Punk passion project WIP prototype. The end goa
 
 While this side project is still in its very early days. I hope to continuously work on it for the foreseeable future! As creating fun things that bring a smile to someone's face is what I love to do most!
 
+*PLEASE NOTE:* In this repo there is also a folder called "Sketches" which contains the artwork and concepts that I worked with some friends of mine to bring to life. I do not claim ownership or credit for the any of the art itself, just the ideas communicated to the artists to bring my vision to a more tangible state.
+
 What you can currently do in this prototype:
 Contains a testing level where the user can test my buttery smooth player movement controller to its fullest. As well as test the start of my Very modular gun and attachment/customization system. 
 
