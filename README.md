@@ -24,3 +24,11 @@ The modular gun customization system includes the following features:
 - Base gun object that allows full customization on the gun's current setup, configuration and stats (including all your basic gun stats like fire rate, reload time, etc. As well as some crazy combos)
 - Gun combo setup: because it is a fully modular system, the goal is to create a "The Binding Isaac" style upgrade system throughout the roguelike "Run" where your projectiles become ridiculous. Currently, the craziest one you can combine is a rapid burst gun combined with a shotgun shot creating a burst shotgun at high fire rate. The goal is to forever expand this idea and gameplay fantasy.
 - Scriptable object pickups that gives full customization to how the pick-up will affect the gun 
+
+*Controls*
+Move - WASD
+Jump - Space
+Dash - LShift
+Crouch/Slide - LCtrl
+Shoot - LClick
+Reload - R
