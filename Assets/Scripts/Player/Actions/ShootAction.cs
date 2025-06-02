@@ -168,7 +168,7 @@ public class ShootAction : AbstractAction
 
         Vector3 newShotDirection = raycastOrigin.forward + new Vector3(xSpread, ySpread, 0);
 
-        Debug.Log(xSpread + ", " + ySpread);
+        //Debug.Log(xSpread + ", " + ySpread);
 
         if (Physics.Raycast(raycastOrigin.position, newShotDirection, out aimHit, raycastLength, layer, triggerInteraction))
         {

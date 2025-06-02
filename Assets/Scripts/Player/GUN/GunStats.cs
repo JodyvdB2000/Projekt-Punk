@@ -78,6 +78,7 @@ public class GunStats : MonoBehaviour
             if (burstFire)
             {
                 bulletsPerBurst += newItem.bulletsPerBurst;
+                burstResetTime += newItem.burstResetTime;
             }
         }
 

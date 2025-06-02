@@ -20,17 +20,17 @@ MonoBehaviour:
   critChance: 0
   critMultiplier: 0
   armorPiercing: 0
-  shotsPerSecond: 0.5
-  shotSpread: 0
+  shotsPerSecond: -2
+  shotSpread: 0.1
   applyBurst: 1
   burstFire: 1
-  bulletsPerBurst: 0
-  burstResetTime: 0
-  applyShotgun: 0
-  shotgunFire: 0
-  bulletsPerShotgun: 0
-  maxMagazineSize: 10
-  reloadSpeed: -0.5
+  bulletsPerBurst: 3
+  burstResetTime: 0.3
+  applyShotgun: 1
+  shotgunFire: 1
+  bulletsPerShotgun: 6
+  maxMagazineSize: 3
+  reloadSpeed: 0
   applyProjectile: 0
   replaceWithProjectile: 0
   projectileObject: {fileID: 0}

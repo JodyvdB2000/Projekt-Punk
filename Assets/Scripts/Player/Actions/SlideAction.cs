@@ -21,8 +21,7 @@ public class SlideAction : AbstractAction
 
     [Space(10)]
 
-    [SerializeField] private float slideYScale;
-    [SerializeField] private float startYScale;
+    [SerializeField] private CrouchAction crouchActionScript;
 
     private Vector3 slopedDirection;
 
@@ -54,11 +53,10 @@ public class SlideAction : AbstractAction
         if (!_playerActions.crouchScript.isCrouched)
         {
             isSliding = true;
-            _playerActions.crouchScript.isCrouched = true;
 
             playerCamScript.DoFov(slideFov);
 
-            transform.localScale = new Vector3(transform.localScale.x, slideYScale, transform.localScale.z);
+            crouchActionScript.ActionMethod();
 
             _playerActions.rigidBody.AddForce(Vector3.down * 5f, ForceMode.Impulse);
             slideTimer = maxSlideTime;

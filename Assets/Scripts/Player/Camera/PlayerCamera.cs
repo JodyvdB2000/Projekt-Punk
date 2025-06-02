@@ -23,6 +23,7 @@ public class PlayerCamera : MonoBehaviour
     public Camera cam;
 
     public float defaultFov;
+    public float currentFov;
 
     public float minMovementSpeed;
     public float maxMovementSpeed;
@@ -70,7 +71,6 @@ public class PlayerCamera : MonoBehaviour
         float fov = (currMoveSpeedProgress * fovDif) + minFov;
 
         float currFov = cam.fieldOfView;
-
         float lerpedFov = Mathf.Lerp(fov, currFov, Time.deltaTime * 200);
 
         cam.fieldOfView = lerpedFov;
@@ -78,7 +78,7 @@ public class PlayerCamera : MonoBehaviour
 
     public void DoFov(float endValue)
     {
-        GetComponent<Camera>().DOFieldOfView(endValue, 0.25f);
+        cam.DOFieldOfView(endValue, 0.25f);
     }
 
     public void DoTilt(float zTilt)
