@@ -761,7 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyCanvas: {fileID: 4390650542473943508}
   healthBar: {fileID: 3931574706027234828}
-  maxHealth: 50
+  maxHealth: 100
   currentHealth: 0
 --- !u!1 &9033364380633860969
 GameObject:
