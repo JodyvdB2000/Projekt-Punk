@@ -2583,7 +2583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 2033002222}
   cameraPosTransform: {fileID: 61659662}
-  mouseSensitivity: 600
+  mouseSensitivity: 300
   rotateHorizontal: 0
   rotateVertical: 180
   rotateOtherly: 0
